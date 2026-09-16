@@ -1,0 +1,76 @@
+{
+  "output_dir": "../outputs/sample",
+  "graphs": [
+    {
+      "id": "voltage_current",
+      "input": "sample_data.csv",
+      "output": "voltage_current.png",
+      "x": "電圧_V",
+      "series": [
+        {
+          "column": "電流_A",
+          "label": "電流",
+          "color": "#1565C0",
+          "marker": "o"
+        }
+      ],
+      "title": "電圧と電流の関係",
+      "x_label": "電圧 V",
+      "y_label": "電流 A"
+    }
+  ],
+  "report": {
+    "output": "sample_experiment_report.docx",
+    "title": "電圧電流特性実験レポート",
+    "subtitle": "クラウド自動生成サンプル",
+    "metadata": [
+      {"label": "実験日", "value": "2026年9月17日"},
+      {"label": "氏名", "value": "山田"}
+    ],
+    "settings": {
+      "font": "Yu Mincho",
+      "body_size": 10.5,
+      "line_spacing": 1.15
+    },
+    "sections": [
+      {
+        "heading": "目的",
+        "paragraphs": [
+          "印加電圧と電流の関係を測定し、測定範囲における特性を確認する。"
+        ]
+      },
+      {
+        "heading": "実験結果",
+        "paragraphs": [
+          "測定結果を[[FIG:vi_graph]]及び[[TABLE:measurements]]に示す。"
+        ],
+        "figures": [
+          {
+            "id": "vi_graph",
+            "graph": "voltage_current",
+            "caption": "電圧と電流の関係"
+          }
+        ],
+        "tables": [
+          {
+            "id": "measurements",
+            "source": "sample_data.csv",
+            "caption": "測定結果",
+            "columns": ["電圧_V", "電流_A", "電力_W"],
+            "labels": {
+              "電圧_V": "電圧 V",
+              "電流_A": "電流 A",
+              "電力_W": "電力 W"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "考察",
+        "paragraphs": [
+          "測定範囲では、電圧の上昇に伴って電流が増加した。詳細な評価では測定器の精度と繰返し測定によるばらつきを確認する必要がある。"
+        ]
+      }
+    ]
+  }
+}

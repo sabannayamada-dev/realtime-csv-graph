@@ -11,6 +11,7 @@ venv/
 *.sqlite*
 *.log
 outputs/
+generated-report/
 work/
 .DS_Store
 Thumbs.db
